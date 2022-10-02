@@ -133,6 +133,14 @@
         $('.menu-item').removeClass('active');
     });
 
+        //On Click Close Blog Post And Project Details
+        $(document).on('click','#close-pop', function() {
+            $('.content-blocks.pop').removeClass('showx');
+            $('.sidebar-menu').removeClass('hidex');
+            $('.inline-menu-container').addClass('showx');
+            $('.content-blocks.pop section').empty();
+        });
+
     $(document).on('click','.menu-block, .menu-item, #close', function() {
         $('.content-blocks').animate({ scrollTop: 0 }, 800);
     });
