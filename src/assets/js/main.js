@@ -1,8 +1,8 @@
-(function($) {
+(function ($) {
     "use strict";
 
-    $(window).on('load', function() {
-        $(".preloader").fadeOut("slow", function() {
+    $(window).on('load', function () {
+        $(".preloader").fadeOut("slow", function () {
             $(".preloader-left").addClass("slide-left");
         });
 
@@ -46,7 +46,7 @@
         });
     });
 
-    $(document).on('click','.portfolio-block, .menu-item', function() {
+    $(document).on('click', '.portfolio-block, .menu-item', function () {
 
         //Portfolio masonry
         var $container = $('#portfolio-container');
@@ -56,7 +56,7 @@
             },
             itemSelector: '.portfolio-item'
         });
-        $(document).on('click', 'li, #filters', function() {
+        $(document).on('click', 'li, #filters', function () {
             $('#filters li').removeClass('active');
             $(this).addClass('active');
             var filterValue = $(this).attr('data-filter');
@@ -77,13 +77,13 @@
 
     //Video background
     var myPlayer;
-    $(function() {
+    $(function () {
         myPlayer = $("#bgndVideo").YTPlayer({ useOnMobile: true, mobileFallbackImage: "assets/mask-4.png" });
 
     });
 
     //Portfolio Modal
-    $(document).on('click', '.open-project', function() {
+    $(document).on('click', '.open-project', function () {
         var projectUrl = $(this).attr("href");
         $('.inline-menu-container').removeClass('showx');
         $('.sidebar-menu').addClass('hidex');
@@ -93,7 +93,7 @@
     });
 
     //On Click Open Menu Items
-    $(document).on('click','.menu-block, .menu-item', function() {
+    $(document).on('click', '.menu-block, .menu-item', function () {
         $('.name-block').addClass('reverse');
         $('.name-block-container').addClass('reverse');
         $('.menu-blocks').addClass('hidex');
@@ -101,14 +101,14 @@
         $('.inline-menu-container.style2').addClass('dark');
     });
     //On Click Open About/Resume Block
-    $(document).on('click','.about-block, .menu-item.about', function() {
+    $(document).on('click', '.about-block, .menu-item.about', function () {
         $('.content-blocks').removeClass('showx');
         $('.content-blocks.about').addClass('showx');
         $('.menu-item').removeClass('active');
         $('.menu-item.about').addClass('active');
     });
     //On Click Open Portfolio Block
-    $(document).on('click','.portfolio-block, .menu-item.portfolio', function() {
+    $(document).on('click', '.portfolio-block, .menu-item.portfolio', function () {
         $('.content-blocks').removeClass('showx');
         $('.content-blocks.portfolio').addClass('showx');
         $('.menu-item').removeClass('active');
@@ -116,7 +116,7 @@
     });
 
     //On Click Open Contact Block
-    $(document).on('click','.contact-block, .menu-item.contact', function() {
+    $(document).on('click', '.contact-block, .menu-item.contact', function () {
         $('.content-blocks').removeClass('showx');
         $('.content-blocks.contact').addClass('showx');
         $('.menu-item').removeClass('active');
@@ -124,7 +124,7 @@
     });
 
     //On Click Close Blocks
-    $(document).on('click','#close', function() {
+    $(document).on('click', '#close', function () {
         $('.name-block').removeClass('reverse');
         $('.name-block-container').removeClass('reverse');
         $('.content-blocks').removeClass('showx');
@@ -133,20 +133,20 @@
         $('.menu-item').removeClass('active');
     });
 
-        //On Click Close Blog Post And Project Details
-        $(document).on('click','#close-pop', function() {
-            $('.content-blocks.pop').removeClass('showx');
-            $('.sidebar-menu').removeClass('hidex');
-            $('.inline-menu-container').addClass('showx');
-            $('.content-blocks.pop section').empty();
-        });
+    //On Click Close Blog Post And Project Details
+    $(document).on('click', '#close-pop', function () {
+        $('.content-blocks.pop').removeClass('showx');
+        $('.sidebar-menu').removeClass('hidex');
+        $('.inline-menu-container').addClass('showx');
+        $('.content-blocks.pop section').empty();
+    });
 
-    $(document).on('click','.menu-block, .menu-item, #close', function() {
+    $(document).on('click', '.menu-block, .menu-item, #close', function () {
         $('.content-blocks').animate({ scrollTop: 0 }, 800);
     });
 
     //Function for 'Index-Menu2.html'
-    $(document).on('click','#home', function() {
+    $(document).on('click', '#home', function () {
         $('.content-blocks').removeClass('showx');
         $('.menu-item').removeClass('active');
         $(this).addClass('active');
@@ -198,7 +198,7 @@
 
         $(document).on('mouseleave', 'a, .zoom-cursor, .menu-item, button, .btn', defaultCursor);
 
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             $('.cursor').css('transform', 'scale(1)');
         });
